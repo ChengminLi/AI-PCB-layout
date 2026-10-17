@@ -1,0 +1,9 @@
+(footprint "Cover_PMMA_revD" (version 20221018) (generator claude)
+  (layer "F.Cu")
+  (descr "Rev D transparent PMMA cover on the case walls - 3D model only; origin = PCB top-left corner")
+  (attr board_only exclude_from_pos_files exclude_from_bom)
+  (fp_text reference "REF**" (at 50 -5) (layer "F.Fab") hide (effects (font (size 1 1) (thickness 0.15))))
+  (fp_text value "Cover_PMMA_revD" (at 50 81) (layer "F.Fab") hide (effects (font (size 1 1) (thickness 0.15))))
+  (model "${KIPRJMOD}/EMC_Demo.3dshapes/Cover_PMMA_revD.step"
+    (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)

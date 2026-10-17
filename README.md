@@ -100,7 +100,11 @@ The reference files cover [topologies](power-pcb-design/references/topologies.md
 
 ## Examples
 
-See [examples/](examples/) for boards designed or reviewed with this skill, including the design files, review-gate reports, and lessons learned.
+See [examples/](examples/) for complete boards with their design files, reports, and results.
+
+<a href="examples/emc-flyback-demo/"><img src="examples/emc-flyback-demo/images/board-3d.png" alt="EMC demonstration flyback, 3D view" width="600"></a>
+
+**[EMC demonstration flyback](examples/emc-flyback-demo/)**: a 24 V to 12 V / 1 A isolated flyback for EMC lectures, with jumper "knobs" that switch filters, gate resistance, snubber, and heatsink potential. KiCad project, 39-page design report, and fabrication files.
 
 ## Contributing
 

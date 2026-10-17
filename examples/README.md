@@ -4,7 +4,7 @@ Real boards designed, revised, or reviewed with the `power-pcb-design` skill. Ea
 
 | Example | Topology | Devices | CAD tool | Scope | Status |
 |---|---|---|---|---|---|
-| *No examples yet. Add the first one!* | | | | | |
+| [EMC demonstration flyback](emc-flyback-demo/) | Isolated flyback, 24 V to 12 V / 1 A, with switchable EMC knobs | IRF520N (Si MOSFET), UC3845B | KiCad 7 | End-to-end | Designed, not yet prototyped |
 
 ## Add an example
 

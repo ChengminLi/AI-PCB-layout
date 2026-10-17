@@ -1,0 +1,24 @@
+(version 1)
+# EMC demo flyback rev E -- voltage-based clearance (= creepage on the flat board surface) rules.
+# Net-class clearances (kicad_pro): P_HV 0.6 mm (31-100 V), P_PWR/P_HI/CHASSIS/S_HI 0.4 mm (<= 34 V), signals 0.2 mm.
+(rule "low-voltage primary pairs (<= 13 V apart)"
+  (condition "(A.NetClass == 'P_HI' || A.NetClass == 'P_SIG') && B.NetClass == 'P_SIG'")
+  (constraint clearance (min 0.2mm)))
+(rule "primary-secondary isolation"
+  (condition "(A.NetClass == 'P_HV' || A.NetClass == 'P_PWR' || A.NetClass == 'P_HI' || A.NetClass == 'P_SIG') && (B.NetClass == 'S_HI' || B.NetClass == 'S_SIG')")
+  (constraint clearance (min 2.5mm)))
+(rule "chassis-secondary"
+  (condition "A.NetClass == 'CHASSIS' && (B.NetClass == 'S_HI' || B.NetClass == 'S_SIG')")
+  (constraint clearance (min 1.5mm)))
+(rule "YPS jumper pins (intended bridge)"
+  (condition "A.Type != 'Zone' && B.Type != 'Zone' && A.intersectsCourtyard('YPS') && B.intersectsCourtyard('YPS')")
+  (constraint clearance (min 0.5mm)))
+(rule "SGCH jumper pins (intended bridge)"
+  (condition "A.Type != 'Zone' && B.Type != 'Zone' && A.intersectsCourtyard('SGCH') && B.intersectsCourtyard('SGCH')")
+  (constraint clearance (min 0.5mm)))
+(rule "CASE jumper pins (intended bridge)"
+  (condition "A.Type != 'Zone' && B.Type != 'Zone' && A.intersectsCourtyard('CASE') && B.intersectsCourtyard('CASE')")
+  (constraint clearance (min 0.5mm)))
+(rule "U2 package pin pitch"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.intersectsCourtyard('U2') && B.intersectsCourtyard('U2')")
+  (constraint clearance (min 0.3mm)))

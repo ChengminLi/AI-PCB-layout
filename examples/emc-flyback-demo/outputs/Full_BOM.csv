@@ -1,0 +1,105 @@
+Ref,Value,MPN / description,LCSC,Source,Assembly,Qty per board,Note,Datasheet,Product page
+J1,VIN+ 24V,"Cliff FCR7350R (red), 4 mm right-angle PCB socket",,Mouser/Farnell,HAND,1,barrel through the left case wall,https://www.cliffuk.co.uk/products/testleads/sockets/fcr7350.pdf,https://www.digikey.com/en/products/result?keywords=FCR7350
+J2,VIN- 0V,"Cliff FCR7350B (black), 4 mm right-angle PCB socket",,Mouser/Farnell,HAND,1,barrel through the left case wall,https://www.cliffuk.co.uk/products/testleads/sockets/fcr7350.pdf,https://www.digikey.com/en/products/result?keywords=FCR7350
+F1,2A/30V PTC,BSMD1812-200-30V,C960026,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C960026.pdf,https://www.lcsc.com/product-detail/C960026.html
+D1,SS510C,SS510C (reverse-polarity),C19229,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C19229.pdf,https://www.lcsc.com/product-detail/C19229.html
+L1,2.2mH WE-CMB,"Wurth 744822222 (2.2 mH, 2 A)",,Mouser/Farnell,HAND,1,Knob: CM choke (bypass with CM1+CM2),https://www.we-online.com/components/products/datasheet/744822222.pdf,https://www.we-online.com/en/components/products/WE-CMB
+CM1,CM bypass +,PZ254V-11-02P,C492401,LCSC (ship with PCB),HAND,1,,https://www.lcsc.com/datasheet/C492401.pdf,https://www.lcsc.com/product-detail/C492401.html
+CM2,CM bypass -,PZ254V-11-02P,C492401,LCSC (ship with PCB),HAND,1,,https://www.lcsc.com/datasheet/C492401.pdf,https://www.lcsc.com/product-detail/C492401.html
+C1,1u 50V,CL31B105KBHNNNE,C1848,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C1848.pdf,https://www.lcsc.com/product-detail/C1848.html
+C2,10n 1kV,CC1206KKX7RCBB103,C107192,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C107192.pdf,https://www.lcsc.com/product-detail/C107192.html
+C3,10n 1kV,CC1206KKX7RCBB103,C107192,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C107192.pdf,https://www.lcsc.com/product-detail/C107192.html
+YCAP,Y-caps to chassis,PZ254V-11-02P,C492401,LCSC (ship with PCB),HAND,1,,https://www.lcsc.com/datasheet/C492401.pdf,https://www.lcsc.com/product-detail/C492401.html
+L2,10uH 3.3A,SWPA8040S100MT,C37429,JLC SMT,SMT,1,,https://jlcpcb.com/partdetail/Sunlord-SWPA8040S100MT/C37429,https://jlcpcb.com/partdetail/Sunlord-SWPA8040S100MT/C37429
+DM,DM bypass,PZ254V-11-02P,C492401,LCSC (ship with PCB),HAND,1,,https://www.lcsc.com/datasheet/C492401.pdf,https://www.lcsc.com/product-detail/C492401.html
+C4,100u 50V,MVK 50V100 M 10*10,C165627,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C165627.pdf,https://www.lcsc.com/product-detail/C165627.html
+C5,4.7u 50V,CL32B475KBUYNNE,C170099,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C170099.pdf,https://www.lcsc.com/product-detail/C170099.html
+C6,4.7u 50V,CL32B475KBUYNNE,C170099,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C170099.pdf,https://www.lcsc.com/product-detail/C170099.html
+R1,10k,0603WAF1002T5E,C25804,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C25804.pdf,https://www.lcsc.com/product-detail/C25804.html
+D5,RED,NCD0805R1,C84256,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C84256.pdf,https://www.lcsc.com/product-detail/C84256.html
+U2,L78L12ACUTR,L78L12ACUTR,C69601,JLC SMT,SMT,1,,https://www.st.com/resource/en/datasheet/l78l.pdf,https://www.lcsc.com/product-detail/C69601.html
+C7,100n,CC0603KRX7R9BB104,C14663,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C14663.pdf,https://www.lcsc.com/product-detail/C14663.html
+C8,10u 25V,CL21A106KAYNNNE,C15850,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C15850.pdf,https://www.lcsc.com/product-detail/C15850.html
+C9,100n,CC0603KRX7R9BB104,C14663,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C14663.pdf,https://www.lcsc.com/product-detail/C14663.html
+U1,UC3845B,UC3845BD1013TR,C7118,JLC SMT,SMT,1,,https://www.st.com/resource/en/datasheet/uc3842b.pdf,https://www.lcsc.com/product-detail/C7118.html
+R2,5.6k,0603WAF5601T5E,C23189,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C23189.pdf,https://www.lcsc.com/product-detail/C23189.html
+C10,1n C0G,CL10C102JB8NNNC,C163508,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C163508.pdf,https://www.lcsc.com/product-detail/C163508.html
+C11,100n,CC0603KRX7R9BB104,C14663,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C14663.pdf,https://www.lcsc.com/product-detail/C14663.html
+C12,1n,CL10B102KB8NNNC,C1588,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C1588.pdf,https://www.lcsc.com/product-detail/C1588.html
+R3,1k,0603WAF1001T5E,C21190,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C21190.pdf,https://www.lcsc.com/product-detail/C21190.html
+C13,220p,CL10B221KB8NNNC,C1603,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C1603.pdf,https://www.lcsc.com/product-detail/C1603.html
+R4,0.15R 2512,HoLR2512-150mR-1%,C500726,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C500726.pdf,https://www.lcsc.com/product-detail/C500726.html
+RG,Rg select,PZ254V-12-6P,C492420,LCSC (ship with PCB),HAND,1,Knob: gate resistance / dv/dt,https://www.lcsc.com/datasheet/C492420.pdf,https://www.lcsc.com/product-detail/C492420.html
+R5,4.7R,0805W8F470KT5E,C17675,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C17675.pdf,https://www.lcsc.com/product-detail/C17675.html
+R6,22R,0805W8F220JT5E,C17561,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C17561.pdf,https://www.lcsc.com/product-detail/C17561.html
+R7,100R,0805W8F1000T5E,C17408,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C17408.pdf,https://www.lcsc.com/product-detail/C17408.html
+R8,10k,0603WAF1002T5E,C25804,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C25804.pdf,https://www.lcsc.com/product-detail/C25804.html
+Q1,IRF520NPBF,IRF520NPBF (Infineon),C2598,LCSC (ship with PCB),HAND,1,"rev D: bottom side, leads bent 90 deg, tab on the case floor (Sil-Pad 400 + M3 screw with shoulder washer)",https://www.infineon.com/dgdl/Infineon-IRF520N-DataSheet-v01_01-EN.pdf,https://www.lcsc.com/product-detail/C2598.html
+MH5,M3 CASE,M3 x 8 mm metal hex stand-off (female-female) to the aluminium case,,Mouser/Farnell,HAND,1,rev D: the case is the Q1 heatsink and the HS node (CASE),,
+CASE,Case select,PZ254V-12-6P,C492420,LCSC (ship with PCB),HAND,1,Knob: case (= Q1 heatsink) floating / 0V / chassis / via 1nF,https://www.lcsc.com/datasheet/C492420.pdf,https://www.lcsc.com/product-detail/C492420.html
+C14,1n 2kV,CC1206KKX7RDBB102,C23631,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C23631.pdf,https://www.lcsc.com/product-detail/C23631.html
+T1,750311591,"Wurth 750311591 (8 uH, 1.5:1:0.67, EFD25)",,Mouser/Farnell,HAND,1,,https://www.we-online.com/components/products/datasheet/750311591.pdf,https://www.we-online.com/en/components/products/WE-FB
+D2,ES2D,ES2D,C364267,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C364267.pdf,https://www.lcsc.com/product-detail/C364267.html
+C15,22n 100V,CC0805KRX7R0BB223,C107137,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C107137.pdf,https://www.lcsc.com/product-detail/C107137.html
+R9,4.7k 1W,25121WJ0472T4E (UNI-ROYAL),,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C71872.pdf,https://octopart.com/search?q=25121WJ0472T4E
+R10,4.7k 1W,25121WJ0472T4E (UNI-ROYAL),,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C71872.pdf,https://octopart.com/search?q=25121WJ0472T4E
+R20,4.7k 1W,25121WJ0472T4E (UNI-ROYAL),,JLC SMT,SMT,1,3 x 4.7k in parallel = 1.57k clamp resistor (rev C),https://www.lcsc.com/datasheet/C71872.pdf,https://octopart.com/search?q=25121WJ0472T4E
+SNUB,RC snubber on,PZ254V-11-02P,C492401,LCSC (ship with PCB),HAND,1,Knob: drain RC snubber,https://www.lcsc.com/datasheet/C492401.pdf,https://www.lcsc.com/product-detail/C492401.html
+C16,100p 2kV C0G,TCC1206COG101J202DT,C2833637,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C2833637.pdf,https://www.lcsc.com/product-detail/C2833637.html
+R11,47R,0805W8F470JT5E,C17714,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C17714.pdf,https://www.lcsc.com/product-detail/C17714.html
+D3,SS510C,SS510C,C19229,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C19229.pdf,https://www.lcsc.com/product-detail/C19229.html
+D7,SS510C,SS510C,C19229,JLC SMT,SMT,1,parallel to D3 (rev C),https://www.lcsc.com/datasheet/C19229.pdf,https://www.lcsc.com/product-detail/C19229.html
+R12,10R,1206W4F100JT5E,C17903,not fitted,DNP,1,,https://www.lcsc.com/datasheet/C17903.pdf,https://www.lcsc.com/product-detail/C17903.html
+C17,100p 2kV,TCC1206COG101J202DT,C2833637,not fitted,DNP,1,,https://www.lcsc.com/datasheet/C2833637.pdf,https://www.lcsc.com/product-detail/C2833637.html
+C18,470u 25V,RVT1E471M1010,C72518,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C72518.pdf,https://www.lcsc.com/product-detail/C72518.html
+C19,470u 25V,RVT1E471M1010,C72518,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C72518.pdf,https://www.lcsc.com/product-detail/C72518.html
+C20,22u 25V,CL32A226KAJNNNE,C52306,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C52306.pdf,https://www.lcsc.com/product-detail/C52306.html
+C21,22u 25V,CL32A226KAJNNNE,C52306,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C52306.pdf,https://www.lcsc.com/product-detail/C52306.html
+R13,1k 1206,1206W4F1001T5E,C4410,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C4410.pdf,https://www.lcsc.com/product-detail/C4410.html
+R14,4.7k,0603WAF4701T5E,C23162,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C23162.pdf,https://www.lcsc.com/product-detail/C23162.html
+D6,GREEN,KT-0805G,C2297,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C2297.pdf,https://www.lcsc.com/product-detail/C2297.html
+J3,VOUT +12V,"Cliff FCR7350R (red), 4 mm right-angle PCB socket",,Mouser/Farnell,HAND,1,barrel through the right case wall,https://www.cliffuk.co.uk/products/testleads/sockets/fcr7350.pdf,https://www.digikey.com/en/products/result?keywords=FCR7350
+J4,VOUT 0V,"Cliff FCR7350B (black), 4 mm right-angle PCB socket",,Mouser/Farnell,HAND,1,barrel through the right case wall,https://www.cliffuk.co.uk/products/testleads/sockets/fcr7350.pdf,https://www.digikey.com/en/products/result?keywords=FCR7350
+R15,39k,0603WAF3902T5E,C23153,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C23153.pdf,https://www.lcsc.com/product-detail/C23153.html
+R16,10k,0603WAF1002T5E,C25804,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C25804.pdf,https://www.lcsc.com/product-detail/C25804.html
+U3,TL431AIDBZR,TL431AIDBZR,C23892,JLC SMT,SMT,1,,https://www.ti.com/lit/ds/symlink/tl431.pdf,https://www.lcsc.com/product-detail/C23892.html
+R17,1k,0603WAF1001T5E,C21190,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C21190.pdf,https://www.lcsc.com/product-detail/C21190.html
+R18,1k,0603WAF1001T5E,C21190,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C21190.pdf,https://www.lcsc.com/product-detail/C21190.html
+R19,10k,0603WAF1002T5E,C25804,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C25804.pdf,https://www.lcsc.com/product-detail/C25804.html
+C22,47n,CL10B473KB8NNNC,C1622,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C1622.pdf,https://www.lcsc.com/product-detail/C1622.html
+U4,LTV-817S,LTV-817S,C189217,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C189217.pdf,https://www.lcsc.com/product-detail/C189217.html
+SGCH,SGND to chassis,PZ254V-11-02P,C492401,LCSC (ship with PCB),HAND,1,Knob: earthed secondary,https://www.lcsc.com/datasheet/C492401.pdf,https://www.lcsc.com/product-detail/C492401.html
+YPS,Pri-sec Y-cap,PZ254V-12-4P,C492419,LCSC (ship with PCB),HAND,1,Knob: pri-sec Y-cap 1 nF / 10 nF (Exercise 11.2),https://www.lcsc.com/datasheet/C492419.pdf,https://www.lcsc.com/product-detail/C492419.html
+C23,1n 2kV,CC1206KKX7RDBB102,C23631,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C23631.pdf,https://www.lcsc.com/product-detail/C23631.html
+C24,10n 1kV,CC1206KKX7RCBB103,C107192,JLC SMT,SMT,1,,https://www.lcsc.com/datasheet/C107192.pdf,https://www.lcsc.com/product-detail/C107192.html
+J5,CHASSIS,"Cliff FCR7350G (green), 4 mm right-angle PCB socket",,Mouser/Farnell,HAND,1,barrel through the left case wall,https://www.cliffuk.co.uk/products/testleads/sockets/fcr7350.pdf,https://www.digikey.com/en/products/result?keywords=FCR7350
+MH1,M3,,,Mouser/Farnell,HAND,1,rev D: M3 x 8 mm NYLON stand-off + nylon screw (no copper: the case connects only via MH5/CASE),,
+MH2,M3,,,Mouser/Farnell,HAND,1,rev D: M3 x 8 mm NYLON stand-off + nylon screw (no copper: the case connects only via MH5/CASE),,
+MH3,M3,,,Mouser/Farnell,HAND,1,rev D: M3 x 8 mm NYLON stand-off + nylon screw (no copper: the case connects only via MH5/CASE),,
+MH4,M3,,,Mouser/Farnell,HAND,1,rev D: M3 x 8 mm NYLON stand-off + nylon screw (no copper: the case connects only via MH5/CASE),,
+DRAIN,SW,Keystone 5002 (white),C238123,LCSC (ship with PCB),HAND,1,,https://www.lcsc.com/datasheet/C238123.pdf,https://www.lcsc.com/product-detail/C238123.html
+GATE,GATE,Keystone 5002 (white),C238123,LCSC (ship with PCB),HAND,1,,https://www.lcsc.com/datasheet/C238123.pdf,https://www.lcsc.com/product-detail/C238123.html
+CS,CSRAW,Keystone 5002 (white),C238123,LCSC (ship with PCB),HAND,1,,https://www.lcsc.com/datasheet/C238123.pdf,https://www.lcsc.com/product-detail/C238123.html
+PGND1,PGND,Keystone 5001 (black),C238122,LCSC (ship with PCB),HAND,1,,https://www.lcsc.com/datasheet/C238122.pdf,https://www.lcsc.com/product-detail/C238122.html
+PGND2,PGND,Keystone 5001 (black),C238122,LCSC (ship with PCB),HAND,1,,https://www.lcsc.com/datasheet/C238122.pdf,https://www.lcsc.com/product-detail/C238122.html
+VOUT,VOUT,Keystone 5002 (white),C238123,LCSC (ship with PCB),HAND,1,,https://www.lcsc.com/datasheet/C238123.pdf,https://www.lcsc.com/product-detail/C238123.html
+SGND,SGND,Keystone 5001 (black),C238122,LCSC (ship with PCB),HAND,1,,https://www.lcsc.com/datasheet/C238122.pdf,https://www.lcsc.com/product-detail/C238122.html
+HS,HS,Keystone 5002 (white),C238123,LCSC (ship with PCB),HAND,1,,https://www.lcsc.com/datasheet/C238123.pdf,https://www.lcsc.com/product-detail/C238123.html
+VBUS,VBUS,Keystone 5002 (white),C238123,LCSC (ship with PCB),HAND,1,,https://www.lcsc.com/datasheet/C238123.pdf,https://www.lcsc.com/product-detail/C238123.html
+CHAS,CHASSIS,Keystone 5001 (black),C238122,LCSC (ship with PCB),HAND,1,,https://www.lcsc.com/datasheet/C238122.pdf,https://www.lcsc.com/product-detail/C238122.html
+T1,,"Wurth 750311591 flyback transformer (EFD25, 8 uH, 1.5:1:0.67)",,Mouser/Farnell/DigiKey,HAND,1,,,
+L1,,Wurth 744822222 WE-CMB common-mode choke 2.2 mH / 2 A,,Mouser/Farnell/DigiKey,HAND,1,,,
+Case,,"Aluminium U-channel case = Q1 heatsink, 3 mm 5754/5052, 112 x 94 x 33 mm (drawing EMC_flyback_case_revD_drawing.pdf, page 1)",,workshop,HAND,1,,,
+Q1 pad,,"Bergquist Sil-Pad 400 TO-220 pre-cut, 0.009 in (SP400-0.009-00-54) - insulator between Q1 tab and case",,Farnell/Mouser,HAND,1,,,
+Q1 washer,,TO-220 nylon shoulder washer for M3 (e.g. Keystone 3049),,Farnell/Mouser,HAND,1,,,
+Q1 screw,,M3 x 6 pan-head steel screw (into the tapped case floor) + M3 flat washer,,any,HAND,1,,,
+"J1,J3",,"Cliff FCR7350R 4 mm right-angle PCB socket, red",,Farnell/DigiKey,HAND,2,,,
+"J2,J4",,"Cliff FCR7350B 4 mm right-angle PCB socket, black",,Farnell/DigiKey,HAND,2,,,
+J5,,"Cliff FCR7350G 4 mm right-angle PCB socket, green (chassis/earth)",,Farnell/DigiKey,HAND,1,,,
+MH1-MH4,,M3 x 8 NYLON hex stand-off F-F + M3 x 6 nylon pan screw (top) + M3 x 6 countersunk screw (bottom),,any,HAND,4,,,
+MH5,,M3 x 8 METAL hex stand-off F-F + M3 x 6 steel pan screw with washer (top) + M3 x 6 countersunk steel screw (bottom),,any,HAND,1,,,
+Cover,,"Transparent cover, 3 mm clear cast PMMA (acrylic), 112 x 94 mm, laser cut with 4 holes and 5 vent slots (drawing page 2)",,workshop / laser cutting,HAND,1,,,
+Cover pillars,,M3 x 30 aluminium hex stand-off F-F + M3 x 6 countersunk screw (floor) + M3 x 8 nylon pan screw (cover),,any,HAND,4,,,
+Feet,,"Self-adhesive rubber feet, >= 3 mm high (case must not touch the ground plate when CASE is open)",,any,HAND,4,,,
+Chassis,,Aluminium ground plate ~300x200x2 mm (reference ground / 'metal housing'),,workshop,HAND,1,,,
+Jumpers,,"2.54 mm jumper shunts (TE 2-382811-1, LCSC C86478)",C86478,LCSC,HAND,15,,https://www.lcsc.com/datasheet/C86478.pdf,

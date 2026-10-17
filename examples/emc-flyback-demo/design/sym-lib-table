@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "EMC_Demo")(type "KiCad")(uri "${KIPRJMOD}/EMC_Demo.kicad_sym")(options "")(descr "EMC demo custom"))
+)

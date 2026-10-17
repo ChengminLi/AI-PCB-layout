@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "EMC_Demo")(type "KiCad")(uri "${KIPRJMOD}/EMC_Demo.pretty")(options "")(descr "EMC demo custom"))
+)

@@ -1,0 +1,11 @@
+(footprint "Case_UChannel_revD" (version 20221018) (generator claude)
+  (layer "F.Cu")
+  (descr "Rev D aluminium U-channel case (Q1 heatsink) with stand-offs, screws and feet - 3D model only; origin = PCB top-left corner")
+  (attr board_only exclude_from_pos_files exclude_from_bom)
+  (fp_text reference "REF**" (at 50 -3) (layer "F.Fab") hide (effects (font (size 1 1) (thickness 0.15))))
+  (fp_text value "Case_UChannel_revD" (at 50 79) (layer "F.Fab") hide (effects (font (size 1 1) (thickness 0.15))))
+  (fp_rect (start -6.0 -9.0) (end 106.0 85.0) (stroke (width 0.1) (type dash)) (fill none) (layer "F.Fab"))
+  (fp_text user "ALU CASE (3D only)" (at 50 83.0) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15))))
+  (model "${KIPRJMOD}/EMC_Demo.3dshapes/Case_UChannel_revD.step"
+    (offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0)))
+)
