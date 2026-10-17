@@ -17,6 +17,7 @@ A small isolated flyback converter built as a live demonstrator for the EMC lect
 | Board | 2 layers, 100 × 76 mm, 1.6 mm FR-4, 1 oz copper |
 | Mechanics | Bent 3 mm aluminium U-channel case (112 × 94 × 33 mm) that is also the MOSFET heatsink, with a clear acrylic cover |
 | CAD tool | KiCad (version 7 file format; opens in KiCad 7, 8, and 9) |
+| Designed with | Claude (AI agent) |
 | Scope | End-to-end design, from requirements to fabrication files |
 | Revision | E (3 October 2026) |
 

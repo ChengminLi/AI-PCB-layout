@@ -1,5 +1,5 @@
 * EMC_flyback_control.lib
-* Behavioural models for the control loop of the 5SWB0 EMC demo flyback (rev B board):
+* Behavioural models for the control loop of the EMC demo flyback (rev B board):
 *   UC3845B  current-mode PWM controller   (U1)
 *   TL431B   shunt reference / error amp   (U3)
 *   LTV817   optocoupler                   (U4)

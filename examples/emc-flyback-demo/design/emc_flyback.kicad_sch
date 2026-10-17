@@ -1,7 +1,7 @@
 (kicad_sch (version 20230121) (generator eeschema)
   (uuid 3aa54833-627b-4ee3-b4f0-5318a2e5851b)
   (paper "A3")
-  (title_block (title "EMC teaching demo - 24V/12V flyback with EMC knobs") (date "2026-10-03") (rev "D") (company "TU/e EPE - 5SWB0 Advanced Power Electronics") (comment 1 "Generated with Claude; verify before ordering"))
+  (title_block (title "EMC teaching demo - 24V/12V flyback with EMC knobs") (date "2026-10-03") (rev "D") (company "TU/e EPE") (comment 1 "Generated with Claude; verify before ordering"))
   (lib_symbols
     (symbol "Connector_Generic:Conn_01x01" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
       (property "Reference" "J" (at 0 2.54 0)
