@@ -1,5 +1,7 @@
 # AI PCB Layout
 
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
 An AI agent skill for **designing, reviewing, and improving power-electronics PCBs** — converters, inverters, motor drives, gate drivers, power supplies, and battery power paths.
 
 The skill teaches an AI coding agent (Cursor, Claude Code, Codex, or any agent that supports `SKILL.md` skills) to work like a careful power-electronics layout engineer: it traces commutation and gate loops from the switching states, derives clearance and copper limits from standards and design currents, and **stops for your approval after every step**, so you stay in control of every design decision.
@@ -103,3 +105,9 @@ See [examples/](examples/) for boards designed or reviewed with this skill, incl
 ## Contributing
 
 Design examples, bug reports, and improvements to the skill are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+This work is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). You may share and adapt it, including for commercial use, as long as you give credit, link to the license, and indicate if you made changes. See [LICENSE](LICENSE) for the full text.
+
+Suggested credit: *"power-pcb-design skill by Chengmin Li, https://github.com/ChengminLi/AI-PCB-layout, licensed under CC BY 4.0."*

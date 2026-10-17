@@ -4,9 +4,9 @@ Use this file in step 1 (tool inventory and version match), steps 4–7 (impleme
 
 ## Where tools run and version match
 
-- Record for each tool: name, exact version, and where it runs (user's computer or Claude's workspace).
+- Record for each tool: name, exact version, and where it runs (user's computer or the agent's workspace).
 - Design files carry a version stamp (in KiCad, the `(version …)` date in the file header). An older tool generally cannot open files saved by a newer one, and opening an older file in a newer tool converts it when saved.
-- If Claude's tool is older than the user's: obtain the matching version; or work read-only (parse the text files, or read reports the user exports from their tool); or have the user make the edits. Never write the user's files with the older version.
+- If the agent's tool is older than the user's: obtain the matching version; or work read-only (parse the text files, or read reports the user exports from their tool); or have the user make the edits. Never write the user's files with the older version.
 - If the workspace cannot download the needed version because of network restrictions, say so, and name which sites an administrator would need to allow.
 
 ## Concept mapping
@@ -31,7 +31,7 @@ Use this file in step 1 (tool inventory and version match), steps 4–7 (impleme
 kicad-cli pcb drc --format json --severity-all --schematic-parity --exit-code-violations -o drc.json board.kicad_pcb
 kicad-cli sch erc -o erc.rpt project.kicad_sch
 ```
-- `--exit-code-violations` returns 5 when violations exist. JSON output lets Claude group violations by type and location.
+- `--exit-code-violations` returns 5 when violations exist. JSON output lets the agent group violations by type and location.
 - Check `kicad-cli sch erc --help` for its options in the installed version.
 
 **Creepage rule**
@@ -61,7 +61,7 @@ kicad-cli sch erc -o erc.rpt project.kicad_sch
 - Other autorouters: Altium Situs, Allegro PCB Router, and others. The same rules apply: route only low-current signal nets, lock critical nets first, add keep-outs over isolation gaps and commutation loops, and set a pass or time limit.
 - Use net-class widths and clearances from step 5 in the exported design, so the autorouter starts from the right rules.
 
-## Making Claude's routing fast (modes A and C)
+## Making the agent's routing fast (modes A and C)
 
 These implement the step 7b list.
 - **Persistent session:** load the board once in a long-running Python process. Apply an edit, refill only the affected zones, and run checks on the changed area. Save at the end of a block, not after each edit.

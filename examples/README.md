@@ -27,5 +27,6 @@ On GitHub, open this `examples` folder and click **Add file → Upload files**. 
 ### Before you upload
 
 - **This repository is public.** Upload only designs you are allowed to share: no confidential, customer, or NDA material.
+- **Examples are published under [CC BY 4.0](../LICENSE).** Anyone may reuse and adapt them, including commercially, as long as they credit you.
 - **Keep files small.** GitHub rejects files over 100 MB and warns above 50 MB. Zip CAD projects and leave out backup folders (for example KiCad's `*-backups/`) and generated caches.
 - **Use images for the overview.** Visitors browse the README first, so add a few PNG or JPG renders rather than relying on CAD files alone.

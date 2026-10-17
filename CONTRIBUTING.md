@@ -2,6 +2,8 @@
 
 Thanks for helping improve this skill. There are three ways to contribute.
 
+By contributing, you agree that your contribution, including design examples, is published under the same [CC BY 4.0 license](LICENSE) as the rest of the repository.
+
 ## Share a design example
 
 Real boards are the most useful contribution: they show how the skill behaves on actual designs. Follow the steps in [examples/README.md](examples/README.md).

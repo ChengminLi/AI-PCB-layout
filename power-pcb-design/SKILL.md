@@ -63,7 +63,7 @@ Keep the report short. Link figures and tables rather than repeating them.
 ### 1. Requirements and inputs
 Inspect supplied files and datasheets first. Ask only for information that materially changes decisions; label provisional assumptions.
 Record: application class and applicable standards; topology and operating modes; input range and transients; outputs and load range; switching frequency and edge rates; device technology; isolation function and environment (pollution degree, altitude, overvoltage category); ambient and cooling; stack-up, board technology, copper and plating; outline, connectors, and enclosure; fabricator and assembler capabilities; CAD and analysis tools available; deliverables and release stage.
-For each tool, record where it runs (user's computer or Claude's workspace) and its exact version. Compare the user's CAD version with the one Claude can run, and with the version stamp in the design files. If Claude's version is older:
+For each tool, record where it runs (user's computer or the agent's workspace) and its exact version. Compare the user's CAD version with the one the agent can run, and with the version stamp in the design files. If the agent's version is older:
 - obtain the matching version, or
 - work read-only, by parsing the files or using reports the user exports from their tool (DRC, netlist, BOM), or
 - have the user make the edits.
@@ -147,9 +147,9 @@ Plan the routing block by block, using the functional groups from step 6:
 On a very small board where blocks overlap heavily, say so and propose routing as one block.
 
 Then offer the reviewer these choices, with a short estimate of effort and risk for this board and a proposed routing budget for modes A and C:
-- **A. Claude routes everything.** Critical nets by script, the rest by script or autorouter. Fully automated, but slow: every correction needs a rebuild, zone fill, DRC, and render. Suits boards where the reviewer cannot route.
-- **B. Reviewer routes interactively; Claude verifies.** The reviewer routes in their CAD tool following the plan. Claude then checks DRC, insulation spacing, copper capability, return paths, and loop parasitics, and reports findings with locations. Usually the fastest for dense or 2-layer power boards.
-- **C. Hybrid.** Claude routes the critical nets from the plan and locks them. The autorouter (or the reviewer) routes the remaining nets within a stated time or pass limit. Claude then checks the result.
+- **A. The agent routes everything.** Critical nets by script, the rest by script or autorouter. Fully automated, but slow: every correction needs a rebuild, zone fill, DRC, and render. Suits boards where the reviewer cannot route.
+- **B. Reviewer routes interactively; the agent verifies.** The reviewer routes in their CAD tool following the plan. The agent then checks DRC, insulation spacing, copper capability, return paths, and loop parasitics, and reports findings with locations. Usually the fastest for dense or 2-layer power boards.
+- **C. Hybrid.** The agent routes the critical nets from the plan and locks them. The autorouter (or the reviewer) routes the remaining nets within a stated time or pass limit. The agent then checks the result.
 
 Wait for the reviewer's choice. Do not pick a mode by default.
 
@@ -162,7 +162,7 @@ Wait for the reviewer's choice. Do not pick a mode by default.
    - stop at a **block gate**.
 3. After all blocks are approved, route the nets between blocks through the reserved corridors. Then fill pours, add stitching, and run the full check set.
 
-A block gate shows: a close-up image of the block, its check results, deviations from the plan, and any change it forces on blocks still to come. The reviewer replies approve, approve with changes, redo, or stop, as at any gate. In mode B the reviewer routes each block and Claude reports the block gate. The reviewer may waive block gates explicitly; the step 7 gate still applies.
+A block gate shows: a close-up image of the block, its check results, deviations from the plan, and any change it forces on blocks still to come. The reviewer replies approve, approve with changes, redo, or stop, as at any gate. In mode B the reviewer routes each block and the agent reports the block gate. The reviewer may waive block gates explicitly; the step 7 gate still applies.
 
 If a later block or connection needs a locked block changed, stop and reopen that block's gate. Never unlock and edit it silently.
 
