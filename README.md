@@ -115,4 +115,4 @@ Design examples, bug reports, and improvements to the skill are welcome. See [CO
 
 This work is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). You may share and adapt it, including for commercial use, as long as you give credit, link to the license, and indicate if you made changes. See [LICENSE](LICENSE) for the full text.
 
-Suggested credit: *"power-pcb-design skill by Chengmin Li, https://github.com/ChengminLi/AI-PCB-layout, licensed under CC BY 4.0."*
+Suggested credit: *"power-pcb-design skill by Chengmin Li, Xiao Yang, https://github.com/ChengminLi/AI-PCB-layout, licensed under CC BY 4.0."*
