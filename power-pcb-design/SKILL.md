@@ -75,17 +75,16 @@ Identify authoritative sources and revisions.
 ### 2. Architecture and limits
 For each switching transition, trace current paths before, during, and after the edge. Identify commutation cells, gate charge/discharge loops, sensing references, and common-mode paths with pins and voltage domains.
 Build the design record:
-- **Net/domain:** reference, voltage range, working/impulse stress, dv/dt, source case.
-- **Branch:** endpoints, RMS/average/peak current, di/dt, fault duration, source case.
+- **Electrical net table** (template in [electrical net table](references/electrical-net-table.md)): for each key node, reference, working and peak voltage, and dv/dt; for each branch and loop, RMS and peak current, di/dt, and fault current; for each sensitive net, its threshold, noise margin, and aggressors. Give every value its source case and evidence type, and the layout constraint it drives.
 - **Loop:** transition, ordered path, closing element, return geometry, dominant uncertainty.
 - **Criterion:** limit, source, margin, verification method.
 
-Use simulation bounding cases when available: maximum input and transients for voltage; minimum input, full load, and overload for current. Do not assign one current to every branch of a net.
-**Gate:** loop map, design record, acceptance criteria.
+Use simulation bounding cases when available: maximum input, start-up, and transients for voltage; minimum input, full load, current limit, and overload for current. Take the worst case of each quantity across all runs, not the nominal run. Do not assign one current to every branch of a net. Where a simulation of the circuit already exists, sweep the parasitics that drive the layout to set their budgets here; in end-to-end work this happens in step 3.
+**Gate:** loop map, electrical net table with constraints, acceptance criteria.
 
 ### 3. Circuit and models (end-to-end only)
-Size the power stage, magnetics, clamps/snubbers, sensing, protection, and control. Select parts with sourcing data. Simulate with the parasitics that matter for the decision, including commutation-loop and gate-loop inductance, common-source inductance, capacitor ESL/ESR, device and magnetic parasitics, and mechanically created capacitances. Avoid double counting what device models already contain.
-**Gate:** calculations, part list, simulated stresses and losses against criteria, model limitations; updated design record.
+Size the power stage, magnetics, clamps/snubbers, sensing, protection, and control. Select parts with sourcing data. Simulate with the parasitics that matter for the decision, including commutation-loop and gate-loop inductance, common-source inductance, capacitor ESL/ESR, device and magnetic parasitics, and mechanically created capacitances. Avoid double counting what device models already contain. Sweep the parasitics that drive the layout (loop inductances, switch-node capacitance) to set their budgets, and update the electrical net table from the simulation results.
+**Gate:** calculations, part list, simulated stresses and losses against criteria, model limitations; updated electrical net table with parasitic budgets.
 
 ### 4. Schematic, footprints, and 3D
 Create or update the schematic. Give every part its online links in the symbol fields, so they carry into the BOM:
@@ -99,8 +98,8 @@ Audit symbol-to-pad mapping, package variant, polarity, exposed pads, land patte
 **Gate:** ERC result, component link table (reference, part number, datasheet, product page, order page, link checked), footprint audit, 3D/mechanical envelope check, part heights.
 
 ### 5. Design rules and stack-up
-Set stack-up and board technology. Derive per domain pair the clearance, creepage, and solid insulation, citing the standard, table, and inputs. Derive conductor and via capability per branch from the design current (worst-case RMS plus a stated margin) and the permitted temperature rise. Implement net classes, rule scopes, and keep-outs in the CAD tool. Limit each exception to a named object pair with justification.
-**Gate:** rule table with sources, conductor table, list of exceptions, rules implemented in CAD.
+Set stack-up and board technology. Assign voltage classes from the working and peak voltages in the electrical net table. Derive per domain pair the clearance, creepage, and solid insulation, citing the standard, table, and inputs. Derive conductor and via capability per branch from the design current (worst-case RMS from the net table plus a stated margin) and the permitted temperature rise. Implement net classes, rule scopes, and keep-outs in the CAD tool. Carry the remaining net-table constraints (copper-area limits, parasitic budgets, keep-outs from sensitive nets) into placement and routing notes. Limit each exception to a named object pair with justification.
+**Gate:** rule table with sources, conductor table, list of exceptions, rules implemented in CAD, and traceability from each net-table constraint to its CAD rule or placement/routing note.
 
 ### 6. Placement
 Fix connectors, holes, keep-outs, isolation boundaries, and thermal interfaces.
@@ -136,7 +135,7 @@ Do not draw any copper until the reviewer has approved a routing plan and chosen
 - path sketch and return path;
 - via count and positions;
 - reference or Kelvin point;
-- the rule that applies.
+- the rules and net-table constraints that apply (for example a loop-inductance budget or a copper-area limit).
 
 Plan the routing block by block, using the functional groups from step 6:
 - **Ground and supply plan** for the whole board: pours, any splits, where returns join, and stitching. Return currents cross block borders, so this comes first.
@@ -186,8 +185,8 @@ Tool-specific methods (DRC command line, autorouter settings, reusable layout bl
 **Gate:** routing mode used, block gates passed or waived, routed images per layer, DRC result (zero unexplained violations), connectivity, deviations from the plan and why, return-path notes.
 
 ### 8. Verification and optimization
-Check measured insulation geometry against rules, including pads, vias, edges, slots, hardware, and accessible metal. Check branch copper capability at bottlenecks against the design current. Extract loop parasitics at a fidelity matching the decision, back-annotate, and re-simulate stresses and losses. Run thermal analysis with the real copper. Compare a small set of variants against the dominant problem within a stated iteration budget. Record every criterion as result plus evidence type.
-**Gate:** check record, variants compared and chosen, remaining unresolved criteria, measurements still required.
+Check measured insulation geometry against rules, including pads, vias, edges, slots, hardware, and accessible metal. Check branch copper capability at bottlenecks against the design current. Extract loop parasitics at a fidelity matching the decision, back-annotate, and re-simulate stresses and losses. Update the electrical net table with the re-simulated values, and check every net-table constraint against the routed board and its parasitic budget. Run thermal analysis with the real copper. Compare a small set of variants against the dominant problem within a stated iteration budget. Record every criterion as result plus evidence type.
+**Gate:** check record, updated electrical net table with each constraint met or unresolved, variants compared and chosen, remaining unresolved criteria, measurements still required.
 
 ### 9. Delivery
 Export fabrication and assembly data for the selected vendors from the checked revision. Include BOM (with the component links from step 4), placement, drawings, 3D, and requested reports, with numbers taken from the recorded results. State release stage and unresolved criteria. Do not label the board compliant or validated without matching evidence. Do not order or publish without explicit permission.
@@ -198,6 +197,7 @@ For a revision, rerun the checks invalidated by the change (see the change-impac
 ## References
 
 Read only what the current step needs:
+- [Electrical net table](references/electrical-net-table.md): template for node voltages and dv/dt, branch currents and di/dt, and sensitive nets; extraction from simulation; turning each value into a layout constraint.
 - [Topologies](references/topologies.md): commutation cells, hot nodes, sensing references, and layout traps per topology.
 - [Devices](references/devices.md): Si, IGBT, SiC, GaN, diodes, modules; gate windows, Kelvin connections, dv/dt immunity.
 - [Regimes and standards](references/regimes-and-standards.md): low-voltage/high-current, mains, high-voltage, high-current regimes; application-to-standard map and required inputs.

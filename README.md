@@ -10,6 +10,7 @@ The skill teaches an AI coding agent (Cursor, Claude Code, Codex, or any agent t
 
 ## What it covers
 
+- **Electrical net table:** worst-case peak voltage, dv/dt, RMS current, and di/dt for each key node and current path, taken from simulation or calculation, and turned into layout constraints
 - **Switching loops:** commutation cells, gate charge and discharge loops, Kelvin connections, and common-mode paths, derived per switching transition
 - **Insulation:** clearance, creepage, and solid insulation derived from the applicable standard and its inputs, never copied from example values
 - **Copper capability:** conductor and via sizing from worst-case RMS current and permitted temperature rise
@@ -96,7 +97,7 @@ AI-PCB-layout/
 └── CONTRIBUTING.md          How to add examples or improve the skill
 ```
 
-The reference files cover [topologies](power-pcb-design/references/topologies.md), [devices](power-pcb-design/references/devices.md), [regimes and standards](power-pcb-design/references/regimes-and-standards.md), [CAD and tools](power-pcb-design/references/cad-and-tools.md), [electrical layout](power-pcb-design/references/electrical-layout.md), [insulation and copper](power-pcb-design/references/insulation-and-copper.md), [analysis and measurement](power-pcb-design/references/analysis-and-measurement.md), [implementation and delivery](power-pcb-design/references/implementation-and-delivery.md), and [behavioral evaluation](power-pcb-design/references/behavioral-evaluation.md).
+The reference files cover the [electrical net table](power-pcb-design/references/electrical-net-table.md), [topologies](power-pcb-design/references/topologies.md), [devices](power-pcb-design/references/devices.md), [regimes and standards](power-pcb-design/references/regimes-and-standards.md), [CAD and tools](power-pcb-design/references/cad-and-tools.md), [electrical layout](power-pcb-design/references/electrical-layout.md), [insulation and copper](power-pcb-design/references/insulation-and-copper.md), [analysis and measurement](power-pcb-design/references/analysis-and-measurement.md), [implementation and delivery](power-pcb-design/references/implementation-and-delivery.md), and [behavioral evaluation](power-pcb-design/references/behavioral-evaluation.md).
 
 ## Examples
 
