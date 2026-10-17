@@ -1,8 +1,9 @@
 # AI PCB Layout
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+A gift for hardware engineer. 
 
-An AI agent skill for **designing, reviewing, and improving power-electronics PCBs** — converters, inverters, motor drives, gate drivers, power supplies, and battery power paths.
+An AI agent skill for **designing, reviewing, and improving power-electronics PCBs**. This skill does not produce a PCB at the first try, instead it provides a way of how to collobrate with the AI agents to boost the productivity of PCB layout. I expect that the user has at least midlevel hardware experience, thus can provide engineering judgement to review the results.  
 
 The skill teaches an AI coding agent (Cursor, Claude Code, Codex, or any agent that supports `SKILL.md` skills) to work like a careful power-electronics layout engineer: it traces commutation and gate loops from the switching states, derives clearance and copper limits from standards and design currents, and **stops for your approval after every step**, so you stay in control of every design decision.
 
