@@ -1,3 +1,13 @@
 node_modules/
 .DS_Store
 Thumbs.db
+
+# LTspice results and logs
+*.raw
+*.log
+
+# KiCad local files and backups
+*-backups/
+fp-info-cache
+*.kicad_prl
+*.lck

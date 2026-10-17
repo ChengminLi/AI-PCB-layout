@@ -66,6 +66,23 @@ More: [bottom copper](images/pcb-bottom.png), [predicted board temperature](imag
 - **Rev E shrank the high-frequency loops** by moving the clamp and snubber into the power cell, so they act within about 14 nH of the drain instead of 26–32 nH.
 - **Voltage-based design rules in KiCad.** Clearances are set per net class from each net's worst-case voltage (0.6 / 0.4 / 0.2 mm, 2.5 mm across the barrier) in the project's `.kicad_dru` file, so KiCad's DRC and zone filler enforce them.
 
+## Simulation
+
+Two LTspice schematics in [`simulation/`](simulation/), built from the board's component values:
+
+| File | What it simulates |
+|---|---|
+| `EMC_flyback_power_stage.asc` | Open-loop power stage at a fixed duty cycle: stresses, waveforms, and switching speed versus gate resistor |
+| `EMC_flyback_closed_loop.asc` | Power stage plus the real control loop, with behavioural UC3845B, TL431, and LTV-817S models: regulation, load steps, cold start, efficiency |
+
+Keep the files in one folder (clone the repository or use **Code → Download ZIP**): the closed-loop schematic needs `EMC_flyback_control.lib` and the three `.asy` symbols next to it. Each schematic has `.param` knobs (`Rg`, `SNUB`, `CTR`, `Vin`, and others) that match the jumpers on the board. The [simulation README](simulation/README.md) explains how to run them, the suggested experiments, and the reference results.
+
+![Closed-loop simulation: output voltage during load steps](simulation/sim_closed_loop.png)
+
+The schematics were verified in ngspice because LTspice was not available when they were made; if LTspice reports a convergence problem, see the tips at the end of the simulation README. The device models are approximate (behavioural controller models, generic diodes, a fitted MOSFET model), and common-mode paths are not modelled, so use the results for trends and margins.
+
+## Report
+
 The [design report](report/EMC_flyback_design_report.pdf) (39 pages) covers the calculations, simulations, thermal model, layout, mechanics, and the conducted-emission test procedure.
 
 ## Files
@@ -74,6 +91,7 @@ The [design report](report/EMC_flyback_design_report.pdf) (39 pages) covers the 
 |---|---|
 | [`report/`](report/) | Design report (PDF) |
 | [`design/`](design/) | KiCad project: open `emc_flyback.kicad_pro`. Includes the custom symbol and footprint libraries, 3D models, and a [schematic PDF](design/emc_flyback_schematic.pdf) |
+| [`simulation/`](simulation/) | LTspice schematics (open loop and closed loop), behavioural model library and symbols, plots, and a how-to README |
 | [`outputs/`](outputs/) | Gerbers for JLCPCB, JLC BOM and placement files, full BOM with datasheet links, and hand-fitted parts list |
 | [`outputs/case/`](outputs/case/) | Workshop drawing of the case and cover (PDF) and their STEP models |
 | [`images/`](images/) | 3D renders, copper views, topology, loop and thermal figures |

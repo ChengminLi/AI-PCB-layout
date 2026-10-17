@@ -104,7 +104,7 @@ See [examples/](examples/) for complete boards with their design files, reports,
 
 <a href="examples/emc-flyback-demo/"><img src="examples/emc-flyback-demo/images/board-3d.png" alt="EMC demonstration flyback, 3D view" width="600"></a>
 
-**[EMC demonstration flyback](examples/emc-flyback-demo/)**: a 24 V to 12 V / 1 A isolated flyback for EMC lectures, with jumper "knobs" that switch filters, gate resistance, snubber, and heatsink potential. KiCad project, 39-page design report, and fabrication files.
+**[EMC demonstration flyback](examples/emc-flyback-demo/)**: a 24 V to 12 V / 1 A isolated flyback for EMC lectures, with jumper "knobs" that switch filters, gate resistance, snubber, and heatsink potential. KiCad project, LTspice simulations, 39-page design report, and fabrication files.
 
 ## Contributing
 

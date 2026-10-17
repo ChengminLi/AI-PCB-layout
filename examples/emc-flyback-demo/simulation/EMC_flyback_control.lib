@@ -1,0 +1,84 @@
+* EMC_flyback_control.lib
+* Behavioural models for the control loop of the 5SWB0 EMC demo flyback (rev B board):
+*   UC3845B  current-mode PWM controller   (U1)
+*   TL431B   shunt reference / error amp   (U3)
+*   LTV817   optocoupler                   (U4)
+* Only B-sources, F-sources, R, C and D are used, so the same file runs in LTspice and ngspice.
+* Global parameters used (define them on the schematic): CTR, FOPTO, RDIV
+*
+* ======================================================================= UC3845B
+* Pin order = datasheet pins 1..8: COMP FB ISENSE RTCT GND OUT VCC VREF
+* What is modelled:
+*  - 5 V reference, UVLO (on above 8.4 V)
+*  - oscillator: RT/CT charged from VREF via RT, discharged with 8.3 mA between 2.8 V (peak) and 1.2 V (valley)
+*  - toggle flip-flop (UC3845 = half the oscillator frequency, max. duty < 50 %)
+*  - PWM latch: set by the oscillator, reset when V(ISENSE) > (V(COMP)-1.4 V)/3, clamped at 1.0 V
+*  - ~70 ns current-sense-to-output delay, totem-pole output VOH = VCC-1.5 V, 4 ohm, ~15 ns edges
+*  - error amplifier: with FB grounded the COMP pin is pulled high by a 0.8 mA source (datasheet typ.),
+*    VOH 5.5 V; it can sink up to 6 mA. The internal 2R/R divider that feeds the current-sense comparator
+*    loads COMP with (V(COMP)-1.4 V)/RDIV (RDIV is not given in the datasheet: an assumption, default 30k)
+.subckt UC3845B COMP FB ISENSE RTCT GN OUT VCC VREF
+* reference + UVLO
+Bon en GN V=u(V(VCC,GN)-8.4)
+Bref vr GN V=5*V(en,GN)
+Rref vr VREF 2
+* oscillator latch d = 1 while discharging
+Bd dd GN V=u(V(RTCT,GN)-2.8) + u(V(RTCT,GN)-1.2)*(1-u(V(RTCT,GN)-2.8))*u(V(d,GN)-0.5)
+Rd dd d 1k
+Cd d GN 1p
+Bdis RTCT GN I=8.3m*u(V(d,GN)-0.5)
+* toggle flip-flop (master m, slave q), clocked by d
+Bm mm GN V=u(V(d,GN)-0.5)*(1-u(V(q,GN)-0.5)) + (1-u(V(d,GN)-0.5))*u(V(m,GN)-0.5)
+Rm mm m 1k
+Cm m GN 1p
+Bq qq GN V=u(V(d,GN)-0.5)*u(V(q,GN)-0.5) + (1-u(V(d,GN)-0.5))*u(V(m,GN)-0.5)
+Rq qq q 1k
+Cq q GN 1p
+* error amplifier (inverting input FB, internal 2.5 V reference), current-limited output
+Btg tg GN V=min(5.5, max(0.1, 2.5 + 1e4*(2.5-V(FB,GN))))
+Bea GN COMP I=min(0.8m, max(-6m, (V(tg,GN)-V(COMP,GN))/100))
+Bdiv COMP GN I=max(0, V(COMP,GN)-1.4)/{RDIV}
+Rfb FB GN 100Meg
+Rcp COMP GN 10Meg
+* current-sense comparator (threshold (Vcomp-1.4)/3, 1 V clamp) with ~70 ns delay
+Bth th GN V=min(1, max(0, (V(COMP,GN)-1.4)/3))
+Bcmp cc GN V=u(V(ISENSE,GN)-V(th,GN))
+Rc cc c 1k
+Cc c GN 100p
+Ris ISENSE GN 10Meg
+* PWM latch: set while the oscillator discharges, reset by the comparator
+Bl ll GN V=u(V(d,GN)-0.5) + (1-u(V(d,GN)-0.5))*(1-u(V(c,GN)-0.5))*u(V(l,GN)-0.5)
+Rl ll l 1k
+Cl l GN 1p
+* output stage (blanked during discharge, enabled after 1 us so the DC operating point starts with Q1 off)
+Bo oo GN V=(V(VCC,GN)-1.5)*(1-u(V(d,GN)-0.5))*u(V(l,GN)-0.5)*u(V(q,GN)-0.5)*V(en,GN)*u(time-1u)
+Ro oo o 1k
+Co o GN 15p
+Bdrv od GN V=V(o,GN)
+Rout od OUT 4
+.ends UC3845B
+*
+* ======================================================================= TL431B
+* Pins: K A REF. Vref = 2.495 V, open-loop gain 60 dB with a 1.5 kHz pole, cathode current >= 0,
+* needs V(K,A) > ~1.5 V, 0.3 mA quiescent current.
+.subckt TL431B K A REF
+Bx xe A V=min(30, max(-1, 1000*(V(REF,A)-2.495)))
+Rx xe x 1k
+Cx x A 106n
+Bk K A I=(1m*max(V(x,A),0)+0.3m)*(1-exp(-max(V(K,A)-1.0,0)/0.3))
+Rr REF A 50Meg
+.ends TL431B
+*
+* ======================================================================= LTV817
+* Pins: A K C E. LED (Vf ~1.1 V at 1 mA) -> collector current = CTR * I_LED with a single pole FOPTO,
+* soft saturation below ~0.3 V V(C,E).
+.subckt LTV817 A K C E
+Vs A a1 0
+D1 a1 K LEDIR
+F1 E fi Vs 1
+Rfi fi E 1k
+Cfi fi E {1/(6.2832*1k*FOPTO)}
+Bc C E I={CTR}*V(fi,E)/1k*(1-exp(-max(V(C,E),0)/0.15))
+Cce C E 10p
+.model LEDIR D(Is=1.5e-13 N=1.8 Rs=2 Cjo=30p)
+.ends LTV817

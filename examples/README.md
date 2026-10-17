@@ -17,6 +17,7 @@ Real boards designed, revised, or reviewed with the `power-pcb-design` skill. Ea
    | `images/` | Placement, routing, and 3D renders; photos of the built board |
    | `design/` | CAD project files, or a single zip of the project |
    | `outputs/` | Gerbers, drill files, BOM, and reports |
+   | `simulation/` | Optional: simulation schematics, models, and plots (leave out large result files such as LTspice `.raw`) |
 
 4. Add a row for your example to the table above.
 
