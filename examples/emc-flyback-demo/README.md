@@ -1,6 +1,6 @@
 # EMC demonstration flyback converter (24 V to 12 V)
 
-A small isolated flyback converter built as a live demonstrator for the EMC lectures of *5SWB0 Advanced Power Electronics* at TU/e. Jumpers on the board, the **"EMC knobs"**, switch the filter stages, the switching speed, a snubber, the potential of the heatsink case, the Y-capacitors, and the output earthing, so students can watch the conducted emissions change on two LISNs.
+A small isolated flyback converter built as a live demonstrator for the EMC lectures at TU/e. Jumpers on the board, the **"EMC knobs"**, switch the filter stages, the switching speed, a snubber, the potential of the heatsink case, the Y-capacitors, and the output earthing, so students can watch the conducted emissions change on two LISNs.
 
 ![3D view of the rev E board](images/board-3d.png)
 
